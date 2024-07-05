@@ -5,5 +5,3 @@ CREATE TABLE "users"
     login VARCHAR(20) NOT NULL UNIQUE,
     PRIMARY KEY (id)
 );
-
-
