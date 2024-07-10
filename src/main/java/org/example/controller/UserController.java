@@ -44,7 +44,7 @@ public class UserController {
     public String createUserPost(User user) throws SQLException {
         String url;
 
-        if (userValidator.isValid(user)) {
+        if (userValidator.isNotValid(user)) {
             url = "createUser";
         } else {
             userService.createUser(user);
@@ -93,7 +93,7 @@ public class UserController {
     public String changeLoginPost(User user) throws SQLException {
         String url;
 
-        if (userValidator.isValid(user)) {
+        if (userValidator.isNotValid(user)) {
             url = "changeUserLogin";
         } else {
             userService.updateUser(user.getId(), user.getEmail(), user.getLogin());
